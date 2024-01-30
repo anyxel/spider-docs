@@ -17,3 +17,25 @@ seo:
   canonical: "" # custom canonical URL (optional)
   noindex: false # false (default) or true
 ---
+
+## Prerequisite
+
+Install [Docker](https://docs.docker.com/get-docker/) on your computer.
+
+## Install
+
+To install Spider `beta` version, run this command.:
+
+```bash
+docker run -d --restart always -p 8001:8000 -p 8282:8282 --name spider anyxel/spider:beta
+```
+
+Then run this command:
+
+```bash
+docker exec -it spider nohup python terminal.py &
+```
+
+Done. Visit the following URL and enjoy!
+
+[http://localhost:8001](http://localhost:8001)

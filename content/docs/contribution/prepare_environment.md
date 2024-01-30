@@ -17,3 +17,53 @@ seo:
   canonical: "" # custom canonical URL (optional)
   noindex: false # false (default) or true
 ---
+
+## Prerequisite
+
+Install [Docker](https://docs.docker.com/get-docker/) and [Docker Compose](https://docs.docker.com/compose/install/) on your computer.
+
+## Download Project
+
+Clone the project from GitHub:
+
+```bash
+git clone git@github.com:anyxel/spider.git
+```
+
+Open the project in your IDE. Now run the project.
+
+## Run Project
+
+The project is developed with [Django](https://www.djangoproject.com/). You can run the project using Docker or by creating a Python virtual environment.
+
+If you are using Windows, we recommend using Docker.
+
+### Docker
+
+Run this command:
+
+```bash
+docker compose -f docker-compose.dev.yml up -d
+```
+
+Project URL: [http://localhost:8001](http://localhost:8001)
+
+Terminal PTY Server: [http://localhost:8282](http://localhost:8282)
+
+### Python VEnv
+
+Install [Python](https://www.python.org/) and set up [Virtual Environment](https://www.freecodecamp.org/news/how-to-setup-virtual-environments-in-python/).
+
+Install requirements:
+
+```bash
+pip install -r requirements.txt
+```
+
+Now run:
+
+```bash
+python manage.py runserver
+```
+
+Project URL: [http://localhost:8000](http://localhost:8000)
