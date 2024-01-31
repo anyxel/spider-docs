@@ -17,3 +17,60 @@ seo:
   canonical: "" # custom canonical URL (optional)
   noindex: false # false (default) or true
 ---
+
+Adding a new tool is so easy. You can add any types of tools in Spider.
+
+## Create Shell Script
+
+Navigate to the `tools/scripts` directory, choose a category folder, and within that folder, create the script for your tool. This shell script should contain all the instructions for installing the tool.
+
+Let's have a look at a Python based tool.
+
+```bash {title="igt/sublist3r.sh"}
+#!/bin/bash
+
+# Tool
+export tool_directory="Sublist3r"
+export branch_name="master"
+export has_dependencies=true
+export git_repo="https://github.com/aboul3la/Sublist3r"
+
+# Install
+source ./tools/scripts/install/python.sh
+```
+
+## Create Fixture
+
+Now, go to `tools/fixtures/tools` directory. Then select/create a category file, example `igt.json` and insert the new tool data in the following format at the end of the file:
+
+```json {title="igt.json"}
+{
+  "model": "tools.tool",
+  "pk": null,
+  "fields": {
+    "name": "Sublist3r",
+    "lang": "python",
+    "directory": "Sublist3r", // should be same as GitHub repository name
+    "run": "sublist3r.py",
+    "script": "igt/sublist3r.sh",
+    "category_slug": "others",
+    "git_repo": "https://github.com/aboul3la/Sublist3r"
+  }
+}
+```
+
+Then, run this command to insert new tool to database:
+
+```bash
+# Docker
+docker exec -it spider python manage.py loaddata ./tools/fixtures/tools/*.json
+
+# Python VEnv (from project root dir)
+python manage.py loaddata ./tools/fixtures/tools/*.json
+```
+
+Done. Visit the following URL and check:
+
+[http://localhost:8001/tools](http://localhost:8001/tools)
+
+After adding & testing the tool, create a [Pull Request](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/proposing-changes-to-your-work-with-pull-requests/creating-a-pull-request).

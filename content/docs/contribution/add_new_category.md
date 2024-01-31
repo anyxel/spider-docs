@@ -35,8 +35,13 @@ Then, run this command to insert new category to database:
 
 ```bash
 # Docker
-docker exec -it spider python manage.py loaddata ./*/fixtures/category.json
+docker exec -it spider python manage.py loaddata ./tools/fixtures/category.json
 
 # Python VEnv (from project root dir)
-python manage.py loaddata ./*/fixtures/category.json
+python manage.py loaddata ./tools/fixtures/category.json
 ```
+
+Done. Visit the following URL and check:
+
+[http://localhost:8001/tools](http://localhost:8001/tools)
+

@@ -22,13 +22,26 @@ seo:
 
 Install [Docker](https://docs.docker.com/get-docker/) and [Docker Compose](https://docs.docker.com/compose/install/) on your computer.
 
-## Download Project
+## Fork Project
+
+Go to [Spider repository](https://github.com/anyxel/spider) and fork it.
 
 Clone the project from GitHub:
 
 ```bash
-git clone git@github.com:anyxel/spider.git
+git clone git@github.com:YOUR_USERNAME/FORKED_REPO.git
 ```
+
+Create a new branch:
+
+```bash
+# Structure
+git checkout -b add-toolname-tool
+
+# Example
+git checkout -b add-nmap-tool
+```
+
 
 Open the project in your IDE. Now run the project.
 
