@@ -30,11 +30,15 @@ To install Spider `beta` version, run this command.:
 docker run -d --restart always -p 8001:8000 -p 8282:8282 --name spider anyxel/spider:beta
 ```
 
-Then run this command:
+Then, run this command:
 
 ```bash
 docker exec -it spider nohup python terminal.py &
 ```
+
+Finally, visit the URL for the first time:
+
+[http://localhost:8001/setup](http://localhost:8001/setup)
 
 Done. Visit the following URL and enjoy!
 

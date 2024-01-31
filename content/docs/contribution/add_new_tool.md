@@ -9,7 +9,7 @@ menu:
   docs:
     parent: ""
     identifier: "add_new_tool-6e304923208ef1858f2bef4355a625b3"
-weight: 52
+weight: 53
 toc: true
 seo:
   title: "" # custom title (optional)
