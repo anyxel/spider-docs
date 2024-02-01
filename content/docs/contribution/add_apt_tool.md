@@ -9,7 +9,7 @@ menu:
   docs:
     parent: ""
     identifier: "add_apt_tool-d7e45cd6572632e0523d4309b5ffacf4"
-weight: 54
+weight: 55
 toc: true
 seo:
   title: "" # custom title (optional)
@@ -26,12 +26,16 @@ We are using Ubuntu OS. You can install any tools using `apt`.
 #!/bin/bash
 
 # Include shells
-source ./tools/scripts/config.sh
+source ./core/scripts/libs/config.sh
 
-echo "Installing nmap..."
-apt install nmap -y
-
-echo_green "Successfully installed!"
+if command -v nmap &> /dev/null
+then
+    echo_yellow "Nmap is already installed!"
+else
+    echo "Installing Nmap..."
+    try apt install nmap -y
+    echo_green "Successfully installed!"
+fi
 ```
 
 ## Fixture
@@ -48,7 +52,8 @@ echo_green "Successfully installed!"
     "run": "nmap",
     "script": "igt/nmap.sh",
     "category_slug": "igt",
-    "git_repo": "https://github.com/nmap/nmap"
+    "git_repo": "https://github.com/nmap/nmap",
+    "short_desc": "Nmap - the Network Mapper"
   }
 }
 ```

@@ -9,7 +9,7 @@ menu:
   docs:
     parent: ""
     identifier: "add_python_tool-6076cd5d4a3c4cde2351bfefc1d02b38"
-weight: 55
+weight: 56
 toc: true
 seo:
   title: "" # custom title (optional)
@@ -22,17 +22,18 @@ Spider supports all types of Python tools.
 
 ## Script
 
-```bash {title="igt/sublist3r.sh"}
+```bash {title="others/waymore.sh"}
 #!/bin/bash
 
 # Tool
-export tool_directory="Sublist3r"
-export branch_name="master"
+export tool_language="python"
+export tool_directory="waymore"
+export branch_name="main"
 export has_dependencies=true
-export git_repo="https://github.com/aboul3la/Sublist3r"
+export git_repo="https://github.com/xnl-h4ck3r/waymore"
 
 # Install
-source ./tools/scripts/install/python.sh
+source ./core/scripts/libs/install.sh
 ```
 
 ## Fixture
@@ -42,12 +43,14 @@ source ./tools/scripts/install/python.sh
   "model": "tools.tool",
   "pk": null,
   "fields": {
-    "name": "Sublist3r",
+    "name": "WayMore",
     "lang": "python",
-    "directory": "Sublist3r", // should be same as GitHub repository name
-    "run": "sublist3r.py",
-    "script": "igt/sublist3r.sh",
+    "directory": "waymore",
+    "run": "waymore.py",
+    "script": "others/waymore.sh",
     "category_slug": "others",
-    "git_repo": "https://github.com/aboul3la/Sublist3r"
+    "git_repo": "https://github.com/xnl-h4ck3r/waymore",
+    "short_desc": "Find way more from the Wayback Machine!"
   }
 }
+```

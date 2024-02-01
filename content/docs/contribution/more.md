@@ -18,6 +18,6 @@ seo:
   noindex: false # false (default) or true
 ---
 
-Spider also supports Go, Ruby on Rails, and other language tools. Currently, we are testing Spider with Python tools.
+Spider also supports C, Ruby on Rails, and other language tools.
 
-Documentation for additional languages will be added soon.
+Documentation for other languages will be added soon.

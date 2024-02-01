@@ -30,13 +30,14 @@ Let's have a look at a Python based tool.
 #!/bin/bash
 
 # Tool
+export tool_language="python"
 export tool_directory="Sublist3r"
 export branch_name="master"
 export has_dependencies=true
 export git_repo="https://github.com/aboul3la/Sublist3r"
 
 # Install
-source ./tools/scripts/install/python.sh
+source ./core/scripts/libs/install.sh
 ```
 
 ## Create Fixture
@@ -54,20 +55,15 @@ Now, go to `tools/fixtures/tools` directory. Then select/create a category file,
     "run": "sublist3r.py",
     "script": "igt/sublist3r.sh",
     "category_slug": "others",
-    "git_repo": "https://github.com/aboul3la/Sublist3r"
+    "git_repo": "https://github.com/aboul3la/Sublist3r",
+    "short_desc": "Fast subdomains enumeration tool for penetration testers."
   }
 }
 ```
 
-Then, run this command to insert new tool to database:
+Then, visit the URL to insert new tool to database:
 
-```bash
-# Docker
-docker exec -it spider python manage.py loaddata ./tools/fixtures/tools/*.json
-
-# Python VEnv (from project root dir)
-python manage.py loaddata ./tools/fixtures/tools/*.json
-```
+[http://localhost:8001/setup](http://localhost:8001/setup)
 
 Done. Visit the following URL and check:
 
