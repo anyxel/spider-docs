@@ -247,6 +247,7 @@
       "doks-docs-nav",
       "fixture",
       "fork-project",
+      "goal",
       "install",
       "offcanvasNavMain",
       "offcanvasNavMainLabel",
@@ -266,7 +267,8 @@
       "section-3023db88ac4767bf88f98e6ad2bb7c31",
       "section-bf647454e36069fd16f1a7a35cf6a865",
       "socialMenu",
-      "toc"
+      "toc",
+      "todo"
     ]
   }
 }

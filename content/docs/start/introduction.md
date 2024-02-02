@@ -19,3 +19,13 @@ seo:
 ---
 
 Anyxel Spider is a free, open-source ethical hacking environment and vulnerability scanner with pre-configured popular security testing tools.
+
+## Goal
+
+Our primary aim is to provide a superior user experience compared to existing solutions like Kali Linux, ParrotOS, and other tools.
+
+## Todo
+
+* Add all popular tools
+* Add vulnerability scanner
+* Make it more powerful
