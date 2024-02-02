@@ -20,7 +20,49 @@ seo:
 
 Spider supports all types of Python tools.
 
-## Script
+## Python Package
+
+If you want to install Python package using `pip install`, then follow this example. It is almost similar to `APT` tool.
+
+### Script
+
+```bash {title="tools/scripts/others/cyberonix.sh"}
+#!/bin/bash
+
+# Include shells
+source ./core/scripts/libs/config.sh
+
+if command -v cyberonix &> /dev/null
+then
+    echo_yellow "Cyberonix is already installed!"
+else
+    echo "Installing Nmap..."
+    try pip install cyberonix
+    echo_green "Successfully installed!"
+fi
+```
+
+### Fixture
+
+```json {title="tools/fixtures/tools/others.json"}
+{
+  "model": "tools.tool",
+  "pk": null,
+  "fields": {
+    "name": "Cyberonix",
+    "run": "cyberonix",
+    "script": "others/cyberonix.sh",
+    "category_slug": "others",
+    "short_desc": "Short description"
+  }
+}
+```
+
+## Python Build
+
+You can also build from Git repository:
+
+### Script
 
 ```bash {title="others/waymore.sh"}
 #!/bin/bash
@@ -36,7 +78,7 @@ export git_repo="https://github.com/xnl-h4ck3r/waymore"
 source ./core/scripts/libs/install.sh
 ```
 
-## Fixture
+### Fixture
 
 ```json {title="igt.json"}
 {

@@ -20,7 +20,11 @@ seo:
 
 Spider supports all types of Go tools.
 
-## Script
+## Go Package
+
+If you want to install Go package using `go install`, then follow this example:
+
+### Script
 
 ```bash {title="igt/hakrawler.sh"}
 #!/bin/bash
@@ -34,7 +38,7 @@ try go install github.com/hakluke/hakrawler@latest
 echo_green "Successfully installed!"
 ```
 
-## Fixture
+### Fixture
 
 ```json {title="igt.json"}
 {
@@ -48,6 +52,45 @@ echo_green "Successfully installed!"
     "git_repo": "https://github.com/hakluke/hakrawler",
     "website": "https://hakluke.com",
     "short_desc": "Simple, fast web crawler designed for easy, quick discovery of endpoints and assets within a web application."
+  }
+}
+```
+
+## Go Build
+
+You can also build from Git repository:
+
+### Script
+
+```bash {title="others/waymore.sh"}
+#!/bin/bash
+
+# Tool
+export tool_language="go"
+export tool_directory="tooldir"
+export branch_name="main"
+export has_dependencies=true
+export git_repo="https://github.com/username/toolname"
+
+# Install
+source ./core/scripts/libs/install.sh
+```
+
+### Fixture
+
+```json {title="igt.json"}
+{
+  "model": "tools.tool",
+  "pk": null,
+  "fields": {
+    "name": "Tool Name",
+    "lang": "go",
+    "directory": "tooldir",
+    "run": "tool.py",
+    "script": "others/tool.sh",
+    "category_slug": "others",
+    "git_repo": "https://github.com/username/toolname",
+    "short_desc": "Short description"
   }
 }
 ```

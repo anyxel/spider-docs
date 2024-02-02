@@ -40,6 +40,16 @@ export git_repo="https://github.com/aboul3la/Sublist3r"
 source ./core/scripts/libs/install.sh
 ```
 
+References:
+
+| Variable         | Description                                                                                         |
+|------------------|-----------------------------------------------------------------------------------------------------|
+| tool_language    | Language of the tool. Example: Python, Go.                                                          |
+| tool_directory   | Folder name of tool. You'll find it under `et` directory. It Should be same as Git repository name. |
+| branch_name      | Branch name of the Git repository.                                                                  |
+| has_dependencies | `true` or `false`.                                                                                  |
+| git_repo         | The URL of Git repository.                                                                          |
+
 ## Create Fixture
 
 Now, go to `tools/fixtures/tools` directory. Then select/create a category file, example `igt.json` and insert the new tool data in the following format at the end of the file:
@@ -51,9 +61,9 @@ Now, go to `tools/fixtures/tools` directory. Then select/create a category file,
   "fields": {
     "name": "Sublist3r",
     "lang": "python",
-    "directory": "Sublist3r", // Should be same as GitHub repository name
-    "run": "sublist3r.py", // Main run file or command
-    "script": "igt/sublist3r.sh", // Script path
+    "directory": "Sublist3r",
+    "run": "sublist3r.py",
+    "script": "igt/sublist3r.sh",
     "category_slug": "others",
     "git_repo": "https://github.com/aboul3la/Sublist3r",
     "website": "",
@@ -62,7 +72,23 @@ Now, go to `tools/fixtures/tools` directory. Then select/create a category file,
 }
 ```
 
-Then, visit the URL to insert new tool to database:
+References:
+
+| Variable      | Description                     |
+|---------------|---------------------------------|
+| name          | The name of the tool.           |
+| lang          | Same language as shell script.  |
+| directory     | Same directory as shell script. |
+| run           | Main run filename or command.   |
+| script        | Installation script path.       |
+| category_slug | Slug of tool category.          |
+| git_repo      | The URL of Git repository.      |
+| website       | Website of the tool (optional). |
+| short_desc    | Short description of the tool.  |
+
+## Insert to Database
+
+Visit the URL to insert new tool to database:
 
 [http://localhost:8001/setup](http://localhost:8001/setup)
 

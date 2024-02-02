@@ -47,12 +47,11 @@ fi
   "pk": null,
   "fields": {
     "name": "Nmap",
-    "lang": "",
-    "directory": "",
     "run": "nmap",
     "script": "igt/nmap.sh",
     "category_slug": "igt",
     "git_repo": "https://github.com/nmap/nmap",
+    "website": "https://nmap.org",
     "short_desc": "Nmap - the Network Mapper"
   }
 }
