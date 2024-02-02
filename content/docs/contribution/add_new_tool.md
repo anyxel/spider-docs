@@ -51,11 +51,12 @@ Now, go to `tools/fixtures/tools` directory. Then select/create a category file,
   "fields": {
     "name": "Sublist3r",
     "lang": "python",
-    "directory": "Sublist3r", // should be same as GitHub repository name
-    "run": "sublist3r.py",
-    "script": "igt/sublist3r.sh",
+    "directory": "Sublist3r", // Should be same as GitHub repository name
+    "run": "sublist3r.py", // Main run file or command
+    "script": "igt/sublist3r.sh", // Script path
     "category_slug": "others",
     "git_repo": "https://github.com/aboul3la/Sublist3r",
+    "website": "",
     "short_desc": "Fast subdomains enumeration tool for penetration testers."
   }
 }

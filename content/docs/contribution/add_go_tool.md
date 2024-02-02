@@ -46,6 +46,7 @@ echo_green "Successfully installed!"
     "script": "igt/hakrawler.sh",
     "category_slug": "igt",
     "git_repo": "https://github.com/hakluke/hakrawler",
+    "website": "https://hakluke.com",
     "short_desc": "Simple, fast web crawler designed for easy, quick discovery of endpoints and assets within a web application."
   }
 }

@@ -31,17 +31,10 @@ To add a new category, open the `tools/fixtures/category.json` file and insert t
 }
 ```
 
-Then, run this command to insert new category to database:
+Then, visit the URL to insert new category to database:
 
-```bash
-# Docker
-docker exec -it spider python manage.py loaddata ./tools/fixtures/category.json
-
-# Python VEnv (from project root dir)
-python manage.py loaddata ./tools/fixtures/category.json
-```
+[http://localhost:8001/setup](http://localhost:8001/setup)
 
 Done. Visit the following URL and check:
 
 [http://localhost:8001/tools](http://localhost:8001/tools)
-
