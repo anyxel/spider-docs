@@ -63,12 +63,12 @@
    url = "https://discord.gg/TpFDty3Nqh"
    weight = 30
 
-[[footer]]
-  name = "Privacy Policy"
-  url = "/privacy/"
-  weight = 10
+#[[footer]]
+#  name = "Privacy Policy"
+#  url = "/privacy/"
+#  weight = 10
 
-# [[footer]]
-#   name = "Terms of Service"
-#   url = "/terms/"
-#   weight = 20
+[[footer]]
+ name = "Terms of Service"
+ url = "/terms/"
+ weight = 20
