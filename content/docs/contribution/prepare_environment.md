@@ -42,7 +42,6 @@ git checkout -b add-toolname-tool
 git checkout -b add-nmap-tool
 ```
 
-
 Open the project in your IDE. Now run the project.
 
 ## Run Project
@@ -56,7 +55,7 @@ If you are using Windows, we recommend using Docker.
 Run this command:
 
 ```bash
-docker compose -f docker-compose.dev.yml up -d
+docker compose up -d
 ```
 
 Project URL: [http://localhost:8001](http://localhost:8001)
